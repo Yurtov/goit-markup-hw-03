@@ -25,14 +25,13 @@ ul {
 
 img {
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 body {
-    background-color: #FFFFFF;
     font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.5;
+    background-color: #FFFFFF;
     letter-spacing: 0.02em;
 }
 
@@ -57,6 +56,7 @@ body {
     line-height: 1.11;
     text-align: center;
     text-transform: capitalize;
+    color: var(--title-color);
 }
 
 .subtitle {
@@ -64,6 +64,13 @@ body {
     font-size: 20px;
     line-height: 1.2;
     color: var(--title-color);
+}
+
+.text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--text-color);
 }
 
 .logo {
@@ -199,14 +206,10 @@ body {
 /* -----Hero----- */
 
 .hero {
+    padding: 188px 0;
     background-color: var(--primary-color);
     text-align: center;
     }
-
-.hero-container {
-    padding: 188px 0;
-    
-}
 
 .hero-title {
     width: 494px;
@@ -230,6 +233,11 @@ body {
     flex-grow: 0;
 }
 
+.hero-btn:hover,
+.hero-btn:focus {
+    border-color: #FFFFFF;
+}
+
 /* -----Benefits----- */
 
 .benefits{
@@ -248,10 +256,8 @@ body {
 }
 
 .benefits-subtitle {
+}
 
-}
-.benefits-text {
-}
 
 /* -----About section----- */
 
@@ -301,7 +307,10 @@ body {
 }
 
 .team-subtitle {
+    margin-bottom: 8px;
+
     text-align: center;
+    color: var(--title-color);
 }
 
 .team-text {
@@ -311,15 +320,9 @@ body {
 /* -----Footer----- */
 
 .footer {
-    display: flex;
-    flex: 0 0 auto;
+    padding: 100px 0;
     
     background-color: var(--primary-color);
-}
-
-.footer-container {
-    margin: 100px 0;
-    width: 264px;
 }
 
 .footer-logo {
@@ -330,12 +333,14 @@ body {
 }
 
 .footer-text {
+    width: 264px;
     color: #E7E9FC;
 }
 
 /* -----Portfolio----- */
 
 .works {
+    padding: 96px 0 120px;
 }
 
 .works-filter-list {
@@ -343,7 +348,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: var(--main-gap);
-    margin: 96px 0 72px;
+    margin-bottom: 72px;
 }
 
 .works-filter-item {
@@ -351,6 +356,7 @@ body {
 }
 .works-filter-btn {
     padding: 12px 24px;
+    border-radius: 4px;
 
     color: var(--accent-color);
     background: #F4F4FD;
@@ -363,8 +369,8 @@ body {
 .works-filter-btn:hover,
 .works-filter-btn:focus {
     background: #404BBF;
+    border-color: var(--accent-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-    border-radius: 4px;
     color: #FFFFFF;
 }
 
@@ -373,7 +379,6 @@ body {
     flex-wrap: wrap;
     row-gap: 48px;
     column-gap: var(--main-gap);
-    margin-bottom: 120px;
 }
 
 .works-item {
@@ -383,12 +388,14 @@ body {
 .works-link {
 }
 
-.works-link 
-
 .work-content {
     border: 1px solid var(--border-color);
     border-top: 0;
-    padding: 32px 0 32px 16px;
+    /* padding: 32px 0 32px 16px; */
+}
+
+.works-link .work-content {
+    padding: 32px 16px;
 }
 
 .works-subtitle {
