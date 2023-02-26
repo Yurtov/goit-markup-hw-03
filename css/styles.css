@@ -313,6 +313,7 @@ body {
 .footer {
     display: flex;
     flex: 0 0 auto;
+    
     background-color: var(--primary-color);
 }
 
@@ -323,7 +324,7 @@ body {
 
 .footer-logo {
     display: block;
-    padding: 16px 0;
+    margin-bottom: 16px;
 
     color: #F4F4FD;
 }
